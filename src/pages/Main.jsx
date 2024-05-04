@@ -3,7 +3,7 @@ export default function Main() {
   return (
     <div>
       <Navbar />
-        <h1>THis is Main Page</h1>
+        <h1>This is Main Page</h1>
     </div>
   )
 }

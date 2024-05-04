@@ -16,3 +16,34 @@ body {
 #bg-blur {
   backdrop-filter: blur(3px);
 }
+.bg-blur {
+  backdrop-filter: blur(10px);
+}
+.blur-bg{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+#dosa-img {
+  filter: drop-shadow(10px 10px 20px black);
+  rotate: 20deg;
+  transform: skew(0deg,0deg);
+  animation: img-up-down 4s infinite;
+}
+#samosa-img {
+  filter: drop-shadow(10px 10px 20px black);
+  animation: img-up-down 5s infinite;
+}
+@keyframes img-up-down {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+.started-btn {
+  filter: drop-shadow(10px 10px 10px #454545);
+}

@@ -9,8 +9,8 @@ export default function Navbar() {
   const [show,setShow] = useState(true);
   return (  
   <>
-    <div className='flex md:hidden'>
-      <div id='bg-blur' className={` drop-shadow-lg duration-500 transition-all ease-in-out flex items-center justify-center absolute w-[75%] ${show ? ('-translate-x-[600px]') : (' translate-x-1')} p-4`}>
+    <div className='flex md:hidden z-[200] '>
+      <div id='bg-blur' className={`mt-4 drop-shadow-lg duration-[400ms] transition-all ease-in-out flex items-center justify-center absolute w-[75%] ${show ? ('-translate-x-[600px]') : (' translate-x-1')} p-4`}>
             <ul className='flex flex-col font-bold gap-3 px-[30px] py-[5px] '>
               <Link to='/' className={`text-[#512C16] text-2xl hover:text-3xl duration-[500ms] transition-all ease-in-out h-[30px] w-[100px ] ${show ? ('-translate-x-[300px]') :('translate-x-1')}`}>Home</Link>
               <hr />
