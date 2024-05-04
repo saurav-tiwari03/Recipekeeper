@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Hero className='z-[-100]'/>
+      <Hero/>
     </div>
   )
 }
