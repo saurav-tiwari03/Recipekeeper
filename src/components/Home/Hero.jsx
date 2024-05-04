@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom'
 
 export default function Hero() {
   return (
-    <div className='flex flex-col md:flex-row items-center justify-between ml-4 relative'>
-      <div className='bg-[#d1c7a0] h-[500px] w-[360px] sm:w-[500px] absolute z-[-100] blur-md flex md:hidden'>
+    <div className='flex flex-col md:flex-row items-center justify-between relative'>
+      <div className='bg-[#d1c7a0] h-[500px] w-[360px] absolute z-[-100] blur-md flex md:hidden'>
       </div>
       {/*Title Part */}
       <div className='flex flex-col items-center md:items-start'>
