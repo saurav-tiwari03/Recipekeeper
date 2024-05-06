@@ -36,11 +36,19 @@ export default function Navbar() {
       {/*Nav items */}
       <div>
         <div className='hidden md:flex'>
-          <ul className='flex gap-[32px] font-bold'>
-            <Link to='/main' className='text-[#E9CA49]'>Home</Link>
-            <Link to='/main' className='text-[#512C16]'>Add Recipe</Link>
-            <Link to='/main' className='text-[#512C16]'>View Recipe</Link>
-            <Link to='/main' className='text-[#512C16]'>Login</Link>
+          <ul className='flex gap-[32px] font-bold '>
+            <Link  to='/main' className='text-[#E9CA49] relative'>
+              <p id='nav-icon'>Home</p>
+            </Link>
+            <Link  to='/main' className='text-[#512C16] relative'>
+              <p id='nav-icon'>Add Recipe</p>
+            </Link>
+            <Link  to='/main' className='text-[#512C16] relative'>
+              <p id='nav-icon'>View Recipe</p>
+            </Link>
+            <Link  to='/main' className='text-[#512C16] relative'>
+            <p id='nav-icon'>Login</p>
+            </Link>
           </ul>
         </div>
       </div>

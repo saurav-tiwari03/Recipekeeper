@@ -47,3 +47,19 @@ body {
 .started-btn {
   filter: drop-shadow(10px 10px 10px #454545);
 }
+#nav-icon::after {  
+  content: "";  
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: black;
+  transition: all ease-in-out .5s;
+}
+#nav-icon:hover::after {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+}
