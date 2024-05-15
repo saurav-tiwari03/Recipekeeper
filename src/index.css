@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -19,14 +19,14 @@ body {
 .bg-blur {
   backdrop-filter: blur(10px);
 }
-.blur-bg{
+.blur-bg {
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
 #dosa-img {
   filter: drop-shadow(10px 10px 20px black);
   rotate: 20deg;
-  transform: skew(0deg,0deg);
+  transform: skew(0deg, 0deg);
   animation: img-up-down 4s infinite;
 }
 #samosa-img {
@@ -47,24 +47,28 @@ body {
 .started-btn {
   filter: drop-shadow(10px 10px 10px #454545);
 }
-#nav-icon::after {  
-  content: "";  
+#nav-icon::after {
+  content: "";
   position: absolute;
   right: 0;
   bottom: 0;
   width: 0%;
   height: 3px;
   background-color: black;
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
 #nav-icon:hover::after {
   width: 100%;
   left: 0;
   bottom: 0;
 }
+
 .drop-shadow {
   filter: drop-shadow(7px 7px 5px #222);
 }
-.drop-shadow:hover {
-  filter: drop-shadow(7px 3px 5px #222);
+
+@media (min-width: 767px) {
+  .drop-shadow {
+   
+  }
 }
