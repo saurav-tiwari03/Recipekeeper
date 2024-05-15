@@ -61,5 +61,10 @@ body {
   width: 100%;
   left: 0;
   bottom: 0;
-
+}
+.drop-shadow {
+  filter: drop-shadow(7px 7px 5px #222);
+}
+.drop-shadow:hover {
+  filter: drop-shadow(7px 3px 5px #222);
 }
