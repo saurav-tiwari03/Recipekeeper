@@ -46,17 +46,17 @@ export default function BestRecipe() {
     {/*Responsive Card  Navigation */}
       <div className='flex flex-col items-center gap-4 mt-10 ml-12 justify-center md:hidden'>
         <div className='flex items-center gap-4'>
-          <div className='text-3xl text-[#d0c69f]'>
+          <div className='text-2xl text-[#d0c69f]'>
             <button onClick={showDecHandler}><FaArrowAltCircleLeft  /></button>
           </div>
-          <div className='flex w-[300px] h-[400px]  text-center relative overflow-x-hidden '>
+          <div className='flex w-[260px] h-[325px]  text-center relative overflow-x-hidden '>
             <div className={`transition-all duration-500 absolute
             ${show == 0 ? 'translate-x-0' :''}
             ${show == 1 ? '-translate-x-[1000px]' : ''}
             ${show == 2 ? '-translate-x-[2000px]' : ''} 
             `}>
               <div>
-                <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[275px] h-[350px] drop-shadow">
+                <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg1} alt="" />
                   <img src={GolgappeImg} alt="" />
                   <p className="text-center text-xl my-4">GolGappe</p>
@@ -73,7 +73,7 @@ export default function BestRecipe() {
             ${show == 1 ? 'translate-x-0' : ''}
             ${show == 2 ? '-translate-x-[1200px]' : ''} 
             `} >
-              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[275px] h-[350px] drop-shadow">
+              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg2} alt="" />
                   <img src={GolgappeImg} alt="" />
                   <p className="text-center text-xl my-4">GolGappe</p>
@@ -90,7 +90,7 @@ export default function BestRecipe() {
             ${show == 1 ? 'translate-x-[1200px]' : ''}
             ${show == 2 ? 'translate-x-0' : ''} 
             `}>
-              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[275px] h-[350px] drop-shadow">
+              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
                 <div>
                   <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg3} alt="" />
                 </div>
@@ -106,12 +106,12 @@ export default function BestRecipe() {
                 </div>
             </div>
         </div>
-        <div className='text-3xl text-[#d0c69f]'>
+        <div className='text-2xl text-[#d0c69f]'>
           <button onClick={showIncHandler}><FaArrowAltCircleRight /></button>
         </div>
        </div>
        {/*Under Line Navigation */}
-       <div className='flex '>
+       <div className='flex gap-1'>
         <div className={` ${show == 0 ? 'bg-[#d0c69f]' : 'bg-[#f7eecd]'} h-[5px] w-[50px]`}></div>
         <div className={` ${show == 1 ? 'bg-[#d0c69f]' : 'bg-[#f7eecd]'} h-[5px] w-[50px]`}></div>
         <div className={` ${show == 2 ? 'bg-[#d0c69f]' : 'bg-[#f7eecd]'} h-[5px] w-[50px]`}></div>
