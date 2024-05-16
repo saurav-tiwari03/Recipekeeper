@@ -49,14 +49,14 @@ export default function BestRecipe() {
           <div className='text-2xl text-[#d0c69f]'>
             <button onClick={showDecHandler}><FaArrowAltCircleLeft  /></button>
           </div>
-          <div className='flex w-[260px] h-[325px]  text-center relative overflow-x-hidden '>
+          <div className='flex w-[250px] h-[320px]  text-center relative overflow-x-hidden '>
             <div className={`transition-all duration-500 absolute
             ${show == 0 ? 'translate-x-0' :''}
             ${show == 1 ? '-translate-x-[1000px]' : ''}
             ${show == 2 ? '-translate-x-[2000px]' : ''} 
             `}>
               <div>
-                <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
+                <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg1} alt="" />
                   <img src={GolgappeImg} alt="" />
                   <p className="text-center text-xl my-4">GolGappe</p>
@@ -73,7 +73,7 @@ export default function BestRecipe() {
             ${show == 1 ? 'translate-x-0' : ''}
             ${show == 2 ? '-translate-x-[1200px]' : ''} 
             `} >
-              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
+              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg2} alt="" />
                   <img src={GolgappeImg} alt="" />
                   <p className="text-center text-xl my-4">GolGappe</p>
@@ -90,7 +90,7 @@ export default function BestRecipe() {
             ${show == 1 ? 'translate-x-[1200px]' : ''}
             ${show == 2 ? 'translate-x-0' : ''} 
             `}>
-              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[250px] h-[320px] drop-shadow">
+              <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <div>
                   <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg3} alt="" />
                 </div>
