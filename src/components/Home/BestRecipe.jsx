@@ -30,7 +30,7 @@ export default function BestRecipe() {
 
   return (
     <div className='my-4'>
-      <div className="flex flex-col md:items-start items-center" >
+      <div className="flex flex-col md:items-start ml-0 md:ml-10 items-center" >
         <h1 className="text-black text-2xl font-bold ">Best Recipes of the Week</h1>
         <div className="h-[4px] w-[300px] bg-[#D3C8A3] "></div>
       </div>

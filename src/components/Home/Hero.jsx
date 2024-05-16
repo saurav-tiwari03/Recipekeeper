@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div className='flex flex-col md:flex-row justify-between gap-4'> 
       {/*Right Side */}
-      <div className='flex items-center justify-center flex-col ml-10'>
+      <div className='flex  justify-center flex-col ml-10'>
         <div className='flex items-center justify-center flex-col'>
           <h1 className="text-[#512C16] text-4xl max-w-[600px] font-bold">
           Where cravings
@@ -22,9 +22,9 @@ export default function Hero() {
               />
           </span>
           </h1>
-        </div>
-        <div>
-          <p className='text-[#E9CD5B] text-center'>Delicious & Nutritious: Recipes Made Easy</p>
+          <div className=''>
+            <p className='text-[#E9CD5B]'>Recipes Made Easy</p>
+          </div>
         </div>
         <div className='flex items-start justify-start'>
           <Link className='bg-[#f4eac4]  text-xl font-semibold px-4 py-2 mt-4 rounded-xl transition-all duration-200' to='/main'>Get Started</Link>
