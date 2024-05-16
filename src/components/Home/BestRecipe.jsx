@@ -44,7 +44,7 @@ export default function BestRecipe() {
       </div>
 
     {/*Responsive Card  Navigation */}
-      <div className='flex flex-col items-center gap-4 mt-10 ml-12 justify-center md:hidden'>
+      <div className='flex flex-col items-center gap-4 mt-10 ml-4 justify-center md:hidden'>
         <div className='flex items-center gap-4'>
           <div className='text-2xl text-[#d0c69f]'>
             <button onClick={showDecHandler}><FaArrowAltCircleLeft  /></button>
