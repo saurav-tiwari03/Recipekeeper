@@ -1,4 +1,5 @@
 import userImg from './../assets/User img.png'
+import WebIcon from './../assets/Web Icon.png'
 import {Link} from 'react-router-dom'
 import { RiMenu3Line } from "react-icons/ri";
 import { ImCancelCircle } from "react-icons/im";
@@ -13,11 +14,7 @@ export default function Navbar() {
     <div className='flex items-center justify-between px-4 py-1'>
       {/*Logo  */}
       <div className='flex justify-center items-center'>
-        <p className='text-6xl font-bold text-[#D1C79F]'>R</p>
-        <p className='flex flex-col gap-[0] text-[#512C16]'>
-          <span>ecipe</span>
-          <span>Keeper</span>
-        </p>
+        <img className='h-[70px] w-[140px]' src={WebIcon} alt="" />
       </div>
       {/*Nav items */}
       <div>

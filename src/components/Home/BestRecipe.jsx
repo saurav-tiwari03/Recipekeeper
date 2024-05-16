@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import GolgappeImg from './../../assets/Golgappe img.png'
