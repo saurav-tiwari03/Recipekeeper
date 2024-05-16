@@ -32,11 +32,11 @@ export default function Hero() {
       </div>
       {/*Left Side */}
       <div className=''>
-        <div>
-          <div className='flex flex-col bg-[#d0c69f] w-auto h-auto md:w-[600px] md:h-[600px] bg-glass'>
-            <img className='h-[300px] w-[325px]' src={samosaImg} alt="" />
+        <div className=''>
+          <div className='flex flex-col bg-[#d0c69f] w-auto h-auto md:w-[600px] md:h-[600px] bg-glass pb-4'>
+            <img className='h-[200px] w-[225px] md:h-[300px] md:w-[325px] drop-shadow-lg' src={samosaImg} alt="" />
             <div className='flex items-end justify-end'>
-              <img className='h-[300px] w-[325px]' src={dosaImg} alt="" />
+              <img className='h-[200px] w-[225px] md:h-[300px] md:w-[325px] drop-shadow-xl' src={dosaImg} alt="" />
             </div>
           </div>
         </div>
