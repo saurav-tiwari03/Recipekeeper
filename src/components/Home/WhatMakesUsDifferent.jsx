@@ -51,11 +51,11 @@ function Headline () {
         <div className="h-[4px] w-[300px] bg-[#D3C8A3] "></div>
       </div>
       <div className="flex items-center justify-center ">
-        <div className="bg-[#fffde7] w-[75%] h-[240px] md:h-[300px] px-8 rounded-tr-[55px] drop-shadow py-4">
-          <ul className="flex flex-col gap-4 w-full">
+        <div className="bg-[#fffde7] w-[75%] px-8 rounded-tr-[55px] drop-shadow py-4">
+          <ul className="flex flex-col gap-4">
             <li className="w-full ">
               <button onClick={() => showHandler(0)} className="text-[#A04818] text-start text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span className="">Collaborative Recipe Creating & Sharing</span>
+                <span className="text-start">Collaborative Recipe Creating & Sharing</span>
                 <span className={`transition-all ease-in-out dur  ation-[600ms] ${show0 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show0 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
@@ -94,7 +94,7 @@ function Headline () {
             <hr />
             <li className="w-full">
               <button onClick={() => showHandler(3)} className="text-[#A04818] text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span>Monetization</span>
+                <span className="text-start">Monetization</span>
                 <span className={`transition-all ease-in-out duration-[600ms] ${show3 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show3 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
