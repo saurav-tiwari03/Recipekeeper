@@ -26,7 +26,7 @@ export default function Hero() {
             <p className='text-[#E9CD5B]'>Recipes Made Easy</p>
           </div>
         </div>
-        <div className='flex items-start justify-start'>
+        <div className='flex items-start justify-center'>
           <Link className='bg-[#f4eac4]  text-xl font-semibold px-4 py-2 mt-4 rounded-xl transition-all duration-200' to='/main'>Get Started</Link>
         </div>
       </div>
