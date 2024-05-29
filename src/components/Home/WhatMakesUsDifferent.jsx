@@ -55,7 +55,7 @@ function Headline () {
           <ul className="flex flex-col gap-4">
             <li className="">
               <button onClick={() => showHandler(0)} className="text-[#A04818] text-start text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span className="text-start">Collaborative Recipe Creating & Sharing</span>
+                <span className="text-start ml-[-20px]">Collaborative Recipe Creating & Sharing</span>
                 <span className={`transition-all ease-in-out dur  ation-[600ms] ${show0 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show0 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
@@ -68,7 +68,7 @@ function Headline () {
             <hr />
             <li className="w-full">
               <button onClick={() => showHandler(1)} className="text-[#A04818] text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span>Scale Recipe Tool</span>
+                <span className="text-start ml-[-20px]">Scale Recipe Tool</span>
                 <span className={`transition-all ease-in-out duration-[600ms] ${show1 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show1 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
@@ -81,7 +81,7 @@ function Headline () {
             <hr />
             <li className="w-full">
               <button onClick={() => showHandler(2)} className="text-[#A04818] text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span className="text-start">Add Recipes to favourites</span>
+                <span className="text-start ml-[-20px]">Add Recipes to favourites</span>
                 <span className={`transition-all ease-in-out duration-[600ms] ${show2 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show2 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
@@ -94,7 +94,7 @@ function Headline () {
             <hr />
             <li className="w-full">
               <button onClick={() => showHandler(3)} className="text-[#A04818] text-xs md:text-2xl font-bold flex items-center justify-between w-full px-8">
-                <span className="text-start">Monetization</span>
+                <span className="text-start ml-[-20px]">Monetization</span>
                 <span className={`transition-all ease-in-out duration-[600ms] ${show3 ? 'rotate-180' : 'rotate-0'}`}>< IoIosArrowDown /></span>
               </button>
               <div className={`grid px-8 overflow-hidden transition-all duration-300 ease-in-out text-black ${show3 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
