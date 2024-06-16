@@ -20,7 +20,7 @@ export default function Navbar() {
       <div>
         <div className='hidden md:flex'>
           <ul className='flex gap-[32px] font-bold '>
-            <Link  to='/main' className='text-[#E9CA49] relative'>
+            <Link  to='/' className='text-[#E9CA49] relative'>
               <p id='nav-icon'>Home</p>
             </Link>
             <Link  to='/main' className='text-[#512C16] relative'>
