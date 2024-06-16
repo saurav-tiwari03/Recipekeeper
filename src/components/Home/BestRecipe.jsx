@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import GolgappeImg from './../../assets/Golgappe img.png'
+import Samosa from './../../assets/Golgappe img.png'
 import MedalImg1 from './../../assets/MedalImg1.png'
 import MedalImg2 from './../../assets/MedalImg2.png'
 import MedalImg3 from './../../assets/MedalImg3.png'
@@ -75,7 +76,7 @@ export default function BestRecipe() {
             `} >
               <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg2} alt="" />
-                  <img src={GolgappeImg} alt="" />
+                  <img src={Samosa} alt="" />
                   <p className="text-center text-xl my-4">GolGappe</p>
                   <div className='flex items-center justify-center'>
                     <button className="bg-[#eddd9f] text-black font-semibold py-1 px-3 rounded-tr-2xl rounded-bl-2xl"> 

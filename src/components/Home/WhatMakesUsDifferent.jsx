@@ -47,7 +47,7 @@ function Headline () {
   return (
     <div className="mb-12">
       <div className="flex flex-col md:items-start ml-0 md:ml-10 items-center mb-4" >
-        <h1 className="text-black text-2xl font-bold ">Best Recipes of the Week</h1>
+        <h1 className="text-black text-2xl font-bold ">What makes use different</h1>
         <div className="h-[4px] w-[300px] bg-[#D3C8A3] "></div>
       </div>
       <div className="flex items-center justify-center ">
