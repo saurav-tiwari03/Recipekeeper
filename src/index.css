@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 * {
   margin: 0;
@@ -71,4 +73,35 @@ body {
   .drop-shadow {
    
   }
+}
+
+.login-page {
+  background-image: url('./assets/Login/Login_Bg_img.png');
+  height: 100vh;
+  width: 100vw;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: start;
+}
+@media (min-width: 768px) {
+  .login-page {
+    
+  }
+}
+.login-bg {
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 black;
+  backdrop-filter: blur( 0px );
+  border-radius: 50px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.form-input-border {
+  height: 2px;
+  width: 0;
+  margin-left: 5px;
+  background-color: #222;
+  transition: all .5s ease-in-out;
+}
+.form-input:focus + .form-input-border {
+  width: 97%;
 }
