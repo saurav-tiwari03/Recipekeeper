@@ -21,7 +21,9 @@ export default function Navbar() {
     <div className='flex items-center justify-between px-4 py-1'>
       {/*Logo  */}
       <div className='flex justify-center items-center'>
-        <img className='h-[70px] w-[140px]' src={WebIcon} alt="" />
+        <Link to='/'>
+          <img className='h-[70px] w-[140px]' src={WebIcon} alt="" />
+        </Link>
       </div>
       {/*Nav items */}
       <div>

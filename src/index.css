@@ -76,7 +76,7 @@ body {
 }
 
 .login-page {
-  background-image: url('./assets/Login/Login_Bg_img.png');
+  background-image: url('https://res.cloudinary.com/dtrszmvgn/image/upload/v1720014224/RecipeKeeper/dmkp2jer79ajuse9hjkf.png');
   height: 100vh;
   width: 100vw;
   background-repeat:no-repeat;

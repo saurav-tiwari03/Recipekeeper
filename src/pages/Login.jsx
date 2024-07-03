@@ -13,7 +13,6 @@ export default function Login() {
   const [showPassword,setShowPassword] = useState(false);
   const {login,isLoading,error} = useLogin()
 
-
   const loginHandler = (e) => {
     e.preventDefault();
     login(email,password)
@@ -26,7 +25,9 @@ export default function Login() {
     <>
       <div className='login-page'>
         <div className=''>
-          <img src={Icon} alt="" width={200} />
+          <Link to='/'>
+            <img src={Icon} alt="" width={200} />
+          </Link>
         </div>
         <div className='flex mt-12 items-center justify-center md:items-start md:justify-start'>
           <form onSubmit={loginHandler} className='login-bg md:ml-4 h-[320px] md:h-[400px] w-[300px] md:w-[600px]'>
