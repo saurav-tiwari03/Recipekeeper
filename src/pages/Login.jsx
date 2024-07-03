@@ -4,6 +4,7 @@ import { FaRegEye,FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { PiSpinnerGapLight } from "react-icons/pi";
 import { useLogin } from '../hooks/useLogin';
+import toast from 'react-hot-toast';
 
 
 export default function Login() {
@@ -16,6 +17,9 @@ export default function Login() {
   const loginHandler = (e) => {
     e.preventDefault();
     login(email,password)
+    if(error){
+      toast.error(error)
+    }
   }
 
   return (
@@ -46,7 +50,7 @@ export default function Login() {
                 }
               </button>
             </div>
-            {error && <p className='text-red-500'>{error.response.data.message}</p>}
+            
             <div className='flex gap-1 items-center justify-center mt-8'>
               <p className='font-Lato'>Dont have an account! </p>
               <Link className='' to='/'>Sign up</Link>
