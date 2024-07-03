@@ -10,13 +10,18 @@ export const useLogin = () => {
   const login = async (email, password) => {
     dispatch(loginStart());
     try {
-      const response = await axios.post('http://localhost:4000/api/v1/login', { email, password });
-      const token = response.data.token;
-      const userData = jwtDecode(token);
-      dispatch(loginSuccess(userData));
+      const response = await axios.post(`${import.meta.env.VITE_API_KEY}/login`, { email, password });
+      if (response && response.data && response.data.token) {
+        const token = response.data.token;
+        const userData = jwtDecode(token);
+        dispatch(loginSuccess(userData));
+      } else {
+        throw new Error("Invalid response from server");
+      }
     } catch (err) {
-      console.error("Login failed: ", err.response.data.message);
-      dispatch(loginFailure( err.response.data.message));
+      const errorMessage = err.response?.data?.message || err.message || "Login failed";
+      console.error("Login failed: ", errorMessage);
+      dispatch(loginFailure(errorMessage));
     }
   };
 
