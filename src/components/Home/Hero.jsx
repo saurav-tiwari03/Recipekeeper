@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
         </div>
         <div className='flex items-start justify-center'>
-          <Link className='bg-[#f4eac4]  text-xl font-semibold px-4 py-2 mt-4 rounded-xl transition-all duration-200' to='/main'>Get Started</Link>
+          <Link className='bg-[#f4eac4]  text-xl font-semibold px-4 py-2 mt-4 rounded-xl transition-all duration-200' to='/login'>Get Started</Link>
         </div>
       </div>
       {/*Left Side */}
