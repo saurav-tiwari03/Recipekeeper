@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux'
 import ViewRecipes from './pages/ViewRecipes'
 import axios from 'axios'
 import { useEffect } from 'react'
+import Profile from './pages/Profile'
+import Signup from './pages/Signup'
 
 export default function App() {
   const {user} = useSelector((state) => state.user)
@@ -25,7 +27,9 @@ export default function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/main' element={user ? <Main /> : <Navigate to='/login' />}/>
         <Route path='/login' element={!user ? <Login /> : <Navigate to='/main' />}/>
+        <Route path='/signup' element={!user ? <Signup /> : <Navigate to='/main' />} />
         <Route path='/recipes' element={user ? <ViewRecipes /> : <Navigate to='/login' />} />
+        <Route path='/user/:userName' element={user ? <Profile /> : <Navigate to='/login' />} />
       </Routes>
     </>
   )

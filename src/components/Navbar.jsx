@@ -50,7 +50,9 @@ export default function Navbar() {
       {/*User details */}
       <div className='flex items-center gap-4'>
         <div>
-          <img className='w-[30px] h-[30px]' src={userImg} alt=""  />
+          <Link to={`/${user ? `user/${user.userName}` : 'login'}`}>
+            <img className='w-[30px] h-[30px]' src={userImg} alt=""  />
+          </Link>
         </div>
         <div className='flex md:hidden'>
           {/*Responsive Navbar Logo */}

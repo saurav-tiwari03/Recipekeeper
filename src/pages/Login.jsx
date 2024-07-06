@@ -54,7 +54,7 @@ export default function Login() {
             
             <div className='flex gap-1 items-center justify-center mt-8'>
               <p className='font-Lato'>Dont have an account! </p>
-              <Link className='' to='/'>Sign up</Link>
+              <Link className='' to='/signup'>Sign up</Link>
             </div>
           </form>
         </div>
