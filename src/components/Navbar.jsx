@@ -17,6 +17,7 @@ export default function Navbar() {
   const logoutHandler = () => {
     logout()
   }
+  const imageUrl = user || false
   return (  
   <>
     
@@ -54,7 +55,7 @@ export default function Navbar() {
         <div>
           <Link to={`/${user ? `user/${user.userName}` : 'login'}`}>
             {
-              user.imageUrl ?
+              imageUrl ?
               (<img className='w-[30px] h-[30px]' src={user.imageUrl}/>) :
               (<FaRegUserCircle className='w-[30px] h-[30px]'/>)
             }
