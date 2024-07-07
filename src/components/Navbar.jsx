@@ -1,4 +1,4 @@
-import userImg from './../assets/User img.png'
+// import userImg from './../assets/User img.png'
 import WebIcon from './../assets/Web Icon.png'
 import {Link} from 'react-router-dom'
 import { RiMenu3Line } from "react-icons/ri";
@@ -6,6 +6,8 @@ import { ImCancelCircle } from "react-icons/im";
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLogout } from '../hooks/useLogout';
+import { FaRegUserCircle } from "react-icons/fa";
+
 
 
 export default function Navbar() {
@@ -51,7 +53,12 @@ export default function Navbar() {
       <div className='flex items-center gap-4'>
         <div>
           <Link to={`/${user ? `user/${user.userName}` : 'login'}`}>
-            <img className='w-[30px] h-[30px]' src={userImg} alt=""  />
+            {
+              user.imageUrl ?
+              (<img className='w-[30px] h-[30px]' src={user.imageUrl}/>) :
+              (<FaRegUserCircle className='w-[30px] h-[30px]'/>)
+            }
+            
           </Link>
         </div>
         <div className='flex md:hidden'>
