@@ -26,7 +26,7 @@ export default function Profile() {
     userDataHandler()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-  console.log(userFound)
+  // console.log(userFound)
   return (
     <div>
       <Navbar/>

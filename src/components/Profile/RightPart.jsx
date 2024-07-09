@@ -4,13 +4,16 @@ import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./Modal";
 import { useGetUserByParams } from './../../hooks/useGetUserByParams';
+import { useSelector } from "react-redux";
 
 export default function RightPart() {
+  const {user} = useSelector((state) => state.user)
   const { userName } = useParams();
   const { getUserByParams } = useGetUserByParams();
-  const [user, setUser] = useState(null); // Set initial state to null to check existence
+  const [userSearch, setUserSearch] = useState(''); 
   const [recipes, setRecipes] = useState([]);
   const navigate = useNavigate();
+  const checkUser = user.userName == userSearch.userName
 
   const chatHandler = () => {
     toast.error('Currently under development');
@@ -24,7 +27,7 @@ export default function RightPart() {
     try {
       const fetchedUser = await getUserByParams(userName);
       if (fetchedUser) {
-        setUser(fetchedUser);
+        setUserSearch(fetchedUser);
       } else {
         toast.error('User not found');
       }
@@ -38,9 +41,9 @@ export default function RightPart() {
     userDataHandler();
 
     const yourRecipesHandler = async () => {
-      if (user?._id) {
+      if (userSearch?._id) {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_API_KEY}/recipe/get/${user._id}`);
+          const response = await axios.get(`${import.meta.env.VITE_API_KEY}/recipe/get/${userSearch._id}`);
           setRecipes(response.data.data);
         } catch (error) {
           console.log(error);
@@ -52,11 +55,11 @@ export default function RightPart() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); 
 
-  if (user === null) {
+  if (userSearch === null) {
     return <p>Loading...</p>; 
   }
 
-  if (!user) {
+  if (!userSearch) {
     return <p>User not found</p>; // Display user not found message
   }
 
@@ -68,12 +71,13 @@ export default function RightPart() {
         <div className="flex items-center justify-between mx-8 mt-4">
           <div className="flex gap-4">
             <div>
-              <p className="text-4xl font-Poppins font-medium text-[#54301a]">{user.name}</p>
-              <p className="text-2xl font-OpenSans text-[#54301a]">@{user.userName}</p>
+              <p className="text-4xl font-Poppins font-medium text-[#54301a]">{userSearch.name}</p>
+              <p className="text-2xl font-OpenSans text-[#54301a]">@{userSearch.userName}</p>
               <hr className="my-1" />
-              <p>{user.bio}</p>
+              <p>{userSearch.bio}</p>
             </div>
-            <Modal />
+            {checkUser && <Modal />}
+            
           </div>
           <div>
             <button className="bg-[#946043] hover:bg-[#8e5336] duration-300 text-xl px-4 py-2 text-white font-semibold rounded-3xl chat-drop-shadow" onClick={chatHandler}>Chat</button>
@@ -84,15 +88,15 @@ export default function RightPart() {
         <div className="flex items-center font-semibold justify-around">
           <div>
             <p className="font-Mulish text-xl">Recipes Uploaded</p>
-            <p className="font-Anton">{user.recipes ? user.recipes.length : 0}</p>
+            <p className="font-Anton">{userSearch.recipes ? userSearch.recipes.length : 0}</p>
           </div>
           <div>
             <p className="font-Mulish text-xl">Upvotes</p>
-            <p className="font-Anton ">{user.upVotes}</p>
+            <p className="font-Anton ">{userSearch.upVotes}</p>
           </div>
           <div>
             <p className="font-Mulish text-xl">Rating</p>
-            <p className="font-Anton text-xl">{user.rating}</p>
+            <p className="font-Anton text-xl">{userSearch.rating}</p>
           </div>
         </div>
 
