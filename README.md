@@ -1,7 +1,6 @@
 # Recipe Keeper
 
 A delightful web application where you can collect and organize all your favorite recipes. Picture yourself effortlessly browsing through recipes, adding new ones, and sharing culinary delights with your friends and family. Let the cooking adventures begin!
-<<<<<<< HEAD
 
 ## Frontend
 1. Home Page: Set the stage with a warm welcome and a tantalizing glimpse of what’s to come. Include a navigation bar guiding users through the app.
@@ -15,4 +14,3 @@ A delightful web application where you can collect and organize all your favorit
 3. MongoDD : Used MongoDB for storing data 
 4. Cloudinary : Used Cloudinary to store images and videos on Cloud
 =======
->>>>>>> 45a2c509242f99de523625d96f7dbf5d53817eca
