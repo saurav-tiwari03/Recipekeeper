@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 import Navbar from './../components/Navbar';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -41,7 +42,7 @@ export default function ViewRecipes() {
                 <h1 className='text-3xl recipe-title absolute -translate-y-10 duration-300 font-Anton text-center w-full text-[#d1c79f] bg-[#744225]'>{recipe.title}</h1>
                 <img className='h-[250px] w-full recipe-image' src={recipe.imageUrl} alt="" />
                 <div className='text-xl absolute -translate-y-1 duration-300 recipe-view flex items-center justify-around w-full font-Poppins'>
-                  <button>View Recipe</button>
+                  <Link to={`/recipes/${recipe._id}`}>View Recipe</Link>
                   <p>{recipe.upVotes.length}</p>
                 </div>
               </div>
