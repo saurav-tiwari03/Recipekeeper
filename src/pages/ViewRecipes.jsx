@@ -1,49 +1,67 @@
-import { useEffect, useState } from "react"
-import Navbar from "../components/Navbar"
-import axios from 'axios'
+import { useEffect, useState } from 'react';
+import Navbar from './../components/Navbar';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+
 export default function ViewRecipes() {
-  const [recipes,setRecipes] = useState([])
-  const [ingredients,setIngredients] = useState([])
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_KEY}/recipes`)
-      .then(response => {
-        // console.log(response.data.recipes[0])
-        axios.get(`${import.meta.env.VITE_API_KEY}/recipes/ingredients/${response.data.recipes[0].ingredients}`)
-        .then((res) => {
-          // console.log(res.data.ingredients.ingredient)
-          setIngredients(res.data.ingredients.ingredient)
-        }).catch((err) => {
-          console.error(err)
-        });
-        setRecipes(response.data.recipes)
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  },[])
+    async function getRecipes() {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_KEY}/recipes`);
+        setRecipes(response.data.recipes);
+      } catch (error) {
+        console.error('Error fetching recipes:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    getRecipes();
+  }, []);
+
   return (
     <div>
-      <Navbar />
       <div>
-        {
-          recipes.length > 0?
-            recipes.map((recipe) => (
-              <div key={recipe._id}>
-                <h3>{recipe.title}</h3>
-                <div>{
-                  ingredients.map((ingredient) => (
-                    <span className="flex " key={ingredient._id} >
-                      <p>{ingredient.name}</p>
-                      <p>{ingredient.amount}</p>
-                    </span>
-                  ))}
+        <Navbar />
+      </div>
+      <div className='flex items-center justify-center md:justify-start'>
+        <SearchRecipe />
+      </div>
+      <div className='recipe-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 drop-shadow ml-4'>
+        {loading ? (
+          <div className='flex items-center justify-center w-full h-64 absolute'>
+            <div className="recipe-loader"></div>
+          </div>
+        ) : (
+          recipes.map((recipe) => (
+            <div className='mx-8 m-4 md:mb-0 md:mx-0' key={recipe._id}>
+              <div className='recipe-box overflow-y-hidden relative'>
+                <h1 className='text-3xl recipe-title absolute -translate-y-10 duration-300 font-Anton text-center w-full text-[#d1c79f] bg-[#744225]'>{recipe.title}</h1>
+                <img className='h-[250px] w-full recipe-image' src={recipe.imageUrl} alt="" />
+                <div className='text-xl absolute -translate-y-1 duration-300 recipe-view flex items-center justify-around w-full font-Poppins'>
+                  <button>View Recipe</button>
+                  <p>{recipe.upVotes.length}</p>
                 </div>
               </div>
-            )) :
-            <div>
-              No recipes found. Please add some recipes.
             </div>
-        }
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+function SearchRecipe() {
+  const searchHandler = () => {
+    toast.error('Search field is currently not working')
+  }
+  return (
+    <div className='flex my-4'>
+      <div className='bg-[#d1c79f] p-4 flex gap-4 rounded-lg md:ml-4 justify-between'>
+        <input className='bg-[transparent] outline-none border-b-2 border-gray-500 w-[250px] duration-300 focus:border-[#744224] placeholder:text-[#744225] placeholder:font-semibold placeholder:font-OpenSans' type="text" placeholder="Search recipe" />
+        <button className='rounded-lg py-2 px-4 bg-[#744225] text-white' onClick={searchHandler}>Search</button>
       </div>
     </div>
   )

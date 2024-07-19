@@ -15,7 +15,9 @@ export default function Login() {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    login(email,password)
+    console.log(email.trim())
+    let trimmedEmail = email.trim();
+    login(trimmedEmail,password)
     if(error){
       toast.error(error)
     }
