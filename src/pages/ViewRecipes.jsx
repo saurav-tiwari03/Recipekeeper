@@ -30,7 +30,7 @@ export default function ViewRecipes() {
       <div className='flex items-center justify-center md:justify-start'>
         <SearchRecipe />
       </div>
-      <div className='recipe-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 drop-shadow ml-4'>
+      <div className='recipe-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 drop-shadow ml-4 mr-4'>
         {loading ? (
           <div className='flex items-center justify-center w-full h-64 absolute'>
             <div className="recipe-loader"></div>

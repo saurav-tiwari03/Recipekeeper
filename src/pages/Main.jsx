@@ -5,8 +5,7 @@ export default function Main() {
   return (
     <div>
       <Navbar />
-        <h1 className="text-3xl font-semibold text-[#512c16] underline-offset-1">This is Main Page</h1>
-        <h2>Welcome! {user.user.name}</h2>
+        <h1 className="text-3xl font-semibold text-[#512c16] underline-offset-1">Welcome! {user.user.name}</h1>
     </div>
   )
 }
