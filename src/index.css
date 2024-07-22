@@ -183,3 +183,35 @@ body {
 .recipe-container {
   filter: drop-shadow(5px 5px 5px #744225);
 }
+
+/*Input field*/
+
+.label-line {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+  pointer-events: none; 
+}
+
+.input-title {
+  transition: 0.2s ease;
+  z-index: 100;
+  background: transparent;
+}
+
+.input-title:focus {
+  border: 2px solid #744225;
+}
+
+.input-title:focus + .label-line {
+  top: -12px;
+  left: 4px;
+  transform: scale(0.88);
+  z-index: 111;
+  color: #744225; 
+  background-color: #fff;
+  padding-left: 3px;
+  padding-right: 3px;
+}
