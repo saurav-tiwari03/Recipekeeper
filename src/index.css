@@ -197,7 +197,6 @@ body {
 
 .input-title {
   transition: 0.2s ease;
-  z-index: 100;
   background: transparent;
 }
 
