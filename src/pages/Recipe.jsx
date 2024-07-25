@@ -1,21 +1,29 @@
 /* eslint-disable no-unused-vars */
 import { useParams,Link } from "react-router-dom";
-import axios from "axios";
+import axios, { formToJSON } from "axios";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import {PiSpinnerGapLight} from 'react-icons/pi'
+import {useUpVote} from './../hooks/useUpVote'
+import { useSelector } from "react-redux";
 
 export default function Recipe() {
   const { id } = useParams();
+  const user = useSelector((state) => state.user)
   const [recipe, setRecipe] = useState(null);
   const [recipeOwnerInfo, setRecipeOwnerInfo] = useState(null);
   const [ingredients, setIngredient] = useState([]);
   const [upVoteLoader,setUpVoteLoader] = useState(false);
+  const {upvote} = useUpVote()
 
   const upVoteHandler = () => {
-    toast.error('UpVote function not implemented')
+    if(!user) {
+      toast.error('Please login to upvote')
+      return;
+    }
     setUpVoteLoader(!upVoteLoader);
+    upvote(id,user.user.id)
   }
 
   useEffect(() => {
