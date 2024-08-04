@@ -123,6 +123,7 @@ export default function BestRecipe() {
   )
 }
 
+
 function BestRecipeCard ({text, img ,isVisible,image}) {
   return (
     <div className={`flex ${isVisible ? '' : 'hidden'}`}>
