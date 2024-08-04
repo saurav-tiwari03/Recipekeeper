@@ -2,7 +2,8 @@
 import { useState } from 'react'
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import GolgappeImg from './../../assets/Golgappe img.png'
-import Samosa from './../../assets/Golgappe img.png'
+import Vegroll from './../../assets/vegroll.jpg'
+import Gajarkahalwa from './../../assets/gajarkahalwa.jpg'
 import MedalImg1 from './../../assets/MedalImg1.png'
 import MedalImg2 from './../../assets/MedalImg2.png'
 import MedalImg3 from './../../assets/MedalImg3.png'
@@ -38,9 +39,9 @@ export default function BestRecipe() {
 
       <div className="hidden md:flex p-12 items-center justify-evenly">
         <div className='flex items-ceter justify-evenly gap-12'>
-          <BestRecipeCard text={'Golgappe'} img={MedalImg1} isVisible={true}/>
-          <BestRecipeCard text={'Gajar Ka Halwa'} img={MedalImg2} isVisible={true}/>
-          <BestRecipeCard text={'Veg Roll'} img={MedalImg3} isVisible={true}/>
+          <BestRecipeCard text={'Golgappe'} img={MedalImg1} isVisible={true} image={GolgappeImg}/>
+          <BestRecipeCard text={'Gajar Ka Halwa'} img={MedalImg2} isVisible={true} image={Gajarkahalwa}/>
+          <BestRecipeCard text={'Veg Roll'} img={MedalImg3} isVisible={true} image={Vegroll}/>
         </div>
       </div>
 
@@ -60,7 +61,7 @@ export default function BestRecipe() {
                 <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg1} alt="" />
                   <img src={GolgappeImg} alt="" />
-                  <p className="text-center text-xl my-4">GolGappe</p>
+                  <p className="text-center text-xl my-4">Golgappe</p>
                   <div className='flex items-center justify-center'>
                     <button className="bg-[#eddd9f] text-black font-semibold py-1 px-3 rounded-tr-2xl rounded-bl-2xl"> 
                       View Recipe 
@@ -76,8 +77,8 @@ export default function BestRecipe() {
             `} >
               <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg2} alt="" />
-                  <img src={Samosa} alt="" />
-                  <p className="text-center text-xl my-4">GolGappe</p>
+                  <img src={Gajarkahalwa} alt="" className='rounded-lg'/>
+                  <p className="text-center text-lg my-2">Gajar ka Halwa</p>
                   <div className='flex items-center justify-center'>
                     <button className="bg-[#eddd9f] text-black font-semibold py-1 px-3 rounded-tr-2xl rounded-bl-2xl"> 
                       View Recipe 
@@ -93,12 +94,12 @@ export default function BestRecipe() {
             `}>
               <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[225px] h-[300px] drop-shadow">
                 <div>
-                  <img className='absolute top-0 left-0 h-[60px] w-[60px]'  src={MedalImg3} alt="" />
+                  <img className='absolute top-0 left-0 h-[60px] w-[60px] '  src={MedalImg3} alt="" />
                 </div>
                   <div>
-                    <img src={GolgappeImg} alt="" />
+                    <img src={Vegroll} alt="" className='rounded-lg h-[100px]'/>
                   </div>
-                  <p className="text-center text-xl my-4">GolGappe</p>
+                  <p className="text-center text-xl my-4">VegRoll</p>
                   <div className='flex items-center justify-center'>
                     <button className="bg-[#eddd9f] text-black font-semibold py-1 px-3 rounded-tr-2xl rounded-bl-2xl"> 
                       View Recipe 
@@ -122,7 +123,7 @@ export default function BestRecipe() {
   )
 }
 
-function BestRecipeCard ({text, img ,isVisible}) {
+function BestRecipeCard ({text, img ,isVisible,image}) {
   return (
     <div className={`flex ${isVisible ? '' : 'hidden'}`}>
       <div className="bg-[#F7EECD] p-12 rounded-tr-[60px] w-[300px] h-[350px] drop-shadow">
@@ -130,7 +131,7 @@ function BestRecipeCard ({text, img ,isVisible}) {
           <img className='absolute top-0 left-0 h-[50px] w-[50px]' src={img} alt="" />
         </div>
         <div>
-          <img src={GolgappeImg} alt="" />
+          <img src={image} alt="" className='h-[200px] w-[300px] rounded-lg'/>
         </div>
         <p className="text-center text-xl my-4">{text}</p>
         <div className='flex items-center justify-center'>
